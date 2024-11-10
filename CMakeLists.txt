@@ -7,6 +7,8 @@ if(WITH_EXPERIMENTAL)
 add_definitions(-DPCP_SADSCP -DPCP_EXPERIMENTAL -DPCP_FLOW_PRIORITY)
 endif()
 
+option(BUILD_TEST "Build tests" OFF)
+
 if(USE_IPV6_SOCKET)
 add_definitions(-DPCP_USE_IPV6_SOCKET)
 endif()
@@ -57,6 +59,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 set(LIB_LIBPCP pcp_library)
 
 add_subdirectory(libpcp)
-add_subdirectory(pcp_app)
-add_subdirectory(pcp_server)
-add_subdirectory(tests)
+#im not using this in my project so gl fixing this :D
+#add_subdirectory(pcp_app)
+#add_subdirectory(pcp_server)
+if (BUILD_TEST)
+    add_subdirectory(tests)
+endif()
