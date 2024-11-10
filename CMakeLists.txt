@@ -56,7 +56,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 # set the name of the static library at top level
 set(LIB_LIBPCP pcp_library)
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/libpcp)
-add_subdirectory(${CMAKE_SOURCE_DIR}/pcp_app)
-add_subdirectory(${CMAKE_SOURCE_DIR}/pcp_server)
-add_subdirectory(${CMAKE_SOURCE_DIR}/tests)
+add_subdirectory(libpcp)
+add_subdirectory(pcp_app)
+add_subdirectory(pcp_server)
+add_subdirectory(tests)
